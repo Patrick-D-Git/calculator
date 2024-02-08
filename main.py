@@ -44,4 +44,4 @@ while True:  # continuous calculation prompt
     if input("Would like to exit? Type y/n :") == "y":
         break
     else:
-        clear()
+        clear()  # clears the terminal
