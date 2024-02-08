@@ -27,8 +27,8 @@ operations = {
 
 while True:  # continuous calculation prompt
 
-    first_number = int(input("Please provide first number: "))
-    second_number = int(input("Please provide second number: "))
+    first_number = float(input("Please provide first number: "))
+    second_number = float(input("Please provide second number: "))
 
     operator = []
     for symbol in operations:
