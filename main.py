@@ -1,4 +1,5 @@
 # A simple calculator
+from replit import clear
 
 
 def add(n1, n2):
@@ -42,4 +43,5 @@ while True:  # continuous calculation prompt
 
     if input("Would like to exit? Type y/n :") == "y":
         break
-
+    else:
+        clear()
