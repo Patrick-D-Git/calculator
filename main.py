@@ -1,22 +1,41 @@
 # A simple calculator
 
-first_number = int(input("Please provide first number: "))
 
-chosen_operator = input("Please choose what type of operator to use '+, -, *, /' : ")
+def add(n1, n2):
+    return n1 + n2
 
-second_number = int(input("Please provide second number: "))
 
-if chosen_operator == "+":
-    answer = first_number + second_number
-    print(f"The answer is {answer}.")
-elif chosen_operator == "-":
-    answer = first_number - second_number
-    print(f"The answer is {answer}.")
-elif chosen_operator == "*":
-    answer = first_number * second_number
-    print(f"The answer is {answer}.")
-elif chosen_operator == "/":
-    answer = first_number / second_number
-    print(f"The answer is {answer}.")
-else:
-    print("Please only choose operator provided")
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):
+    return n1 * n2
+
+
+def divide(n1, n2):
+    return n1 / n2
+
+
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+}
+
+while True:  # continuous calculation prompt
+
+    first_number = int(input("Please provide first number: "))
+    second_number = int(input("Please provide second number: "))
+
+    operator = []
+    for symbol in operations:
+        operator += symbol
+
+    operation_symbol = input(f"Pick an operation {operator} : ")
+
+    calculation_function = operations[operation_symbol]
+    answer = calculation_function(first_number, second_number)
+
+    print(f"{first_number} {operation_symbol} {second_number} = {answer}")
