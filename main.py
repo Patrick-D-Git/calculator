@@ -39,3 +39,7 @@ while True:  # continuous calculation prompt
     answer = calculation_function(first_number, second_number)
 
     print(f"{first_number} {operation_symbol} {second_number} = {answer}")
+
+    if input("Would like to exit? Type y/n :") == "y":
+        break
+
